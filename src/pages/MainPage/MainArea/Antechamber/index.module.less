@@ -1,0 +1,69 @@
+/**
+ * Copyright 2025 Beijing Volcano Engine Technology Co., Ltd. All Rights Reserved.
+ * SPDX-license-identifier: BSD-3-Clause
+ */
+
+ .wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    .avatar {
+      /**
+           * height = 128px in AvatarCard.avatar
+           *
+           */
+      margin-top: -128px;
+      /**
+           * width = 128px in AvatarCard.avatar 
+           * 128px / 2 = 64px
+           *
+           */
+      transform: translateX(calc(50% - 64px));
+    }
+  
+    .mobile {
+      transform: none !important;
+    }
+  
+    .description {
+      font-family: PingFang SC;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 20px;
+      color: #c7ccd6;
+  
+      position: absolute;
+      bottom: 24px;
+      left: 24px;
+    }
+  
+    .invoke-btn {
+      margin-top: 32px;
+    }
+  
+    .mobileDesc {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      text-align: center;
+      color: #737a87;
+      position: absolute;
+      bottom: 12px;
+    }
+  }
+  
+  .mobile {
+    background: 
+    /* 图层1 (最上层): 背景图片 */
+    /* url(...) [position] / [size] [repeat] */ url('../../../../assets/img/mobileBg.png')
+        center center / cover no-repeat,
+      /* 图层2 (下层): 渐变背景 */ linear-gradient(167.98deg, #f5f7ff 0%, #faf3ff 100%);
+    border-radius: 0;
+  }
+  

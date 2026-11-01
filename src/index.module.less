@@ -1,0 +1,42 @@
+/**
+ * Copyright 2025 Beijing Volcano Engine Technology Co., Ltd. All Rights Reserved.
+ * SPDX-license-identifier: BSD-3-Clause
+ */
+
+#demo-for-xxx-provider {
+    flex: 1;
+  
+    // ------背景色------
+    // 页面可以配置背景色，但不建议，设计同学建议将背景色设置成透明，透出主应用的渐变背景色
+    background: transparent;
+    // -----------------
+  
+    // ------适配------
+    width: 100%;
+    height: 100%;
+    min-width: 730px; // 最小宽度，可根据情况自定义，页面显示区域不够最小高度时，会允许scroll。
+    // 建议pc端最小宽度小于等于730px（渲染区域的最小尺寸），这样可以避免页面滚动，用户体验更好。
+    min-height: 1000px; // 最小高度，可根据情况自定义，页面显示区域不够最小高度时，会允许scroll。
+  
+    // 官网规范，<768px时为移动端
+    @media (max-width: 767px) {
+      width: 100%; // 移动端渲染区域的宽度，等于设备屏幕的宽度
+    }
+    // -----------------
+  
+    // 写全局样式要防止与官网样式冲突
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      box-sizing: border-box;
+    }
+  
+    .container-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
+  

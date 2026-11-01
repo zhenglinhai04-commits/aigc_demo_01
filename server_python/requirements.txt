@@ -1,0 +1,14 @@
+# Web 框架核心
+fastapi==0.115.0
+
+# 高性能 ASGI 服务器
+uvicorn[standard]==0.32.0
+
+# 异步 HTTP 客户端（用于调用 AI 接口，如 OpenAI 或 HuggingFace）
+httpx==0.27.2
+
+# 数据模型与校验（AI 开发的核心）
+pydantic==2.9.2
+
+# 如果需要处理环境变量（如 API_KEY）
+python-dotenv==1.0.1
