@@ -1,7 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+**/node_modules/
+node_modules - 副本/
 /.pnp
 .pnp.js
 .vscode
@@ -23,7 +24,6 @@ yarn-debug.log*
 yarn-error.log*
 .eslintcache
 
-/Server/node_modules
 /Server/log
 /log
 yarn.lock
@@ -34,7 +34,9 @@ log/
 
 **/__pycache__
 **/.env
-/server_python/scenes/custom.json
+# 场景配置含密钥（AK/SK、RTC AppKey），禁止提交；如需共享请用 Custom.example.json
+**/Custom.json
+**/custom.json
 
 # Python
 *.pyc
